@@ -1,17 +1,19 @@
 import React from 'react';
 import {Navbar} from "react-bootstrap";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {faSearch} from "@fortawesome/free-solid-svg-icons";
+import {faNetworkWired} from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
+import "../NavBar/NavBar.css";
+
 
 
 function NavBar() {
     return (
         <div>
-         <Navbar className="align-items-end w-100">
+         <Navbar className="navbar-container">
          <Link to={`/`}>
              <Navbar.Brand href="#home">
-          <FontAwesomeIcon icon={faSearch}/>
+          <FontAwesomeIcon icon={faNetworkWired}  style={{color: 'whitesmoke'}} className="icon-padding"/>
         </Navbar.Brand>
         </Link>
         <h3 className="logoTitle">Strive Jobs</h3>

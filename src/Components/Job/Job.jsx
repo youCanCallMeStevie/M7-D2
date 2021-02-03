@@ -1,6 +1,10 @@
 import React from "react";
 import { Col, Card, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faForward } from "@fortawesome/free-solid-svg-icons";
+import "../Job/Job.css";
+
 
 function Job(props) {
   const { job } = props;
@@ -17,12 +21,12 @@ function Job(props) {
                 ? job.company_logo
                 : "http://placehold.it/100x100"
             }
-            className=""
+            className="company-logo-card"
           />
-          <Card.Body>
-            <Card.Title className="">{job.company}</Card.Title>
+          <Card.Body className="company-card">
+            <Card.Title >{job.company}</Card.Title>
             <Link to={`/details/${job.id}`}>
-              <Button variant="primary">See more</Button>
+              <Button variant="primary" className="every-button">                    <FontAwesomeIcon icon={faForward} className="icon-padding"/>See more</Button>
             </Link>
           </Card.Body>
         </Card>

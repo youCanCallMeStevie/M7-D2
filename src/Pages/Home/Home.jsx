@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
-import { Row, Col, Container, Spinner } from "react-bootstrap";
+import { Row, Col, Container, Spinner, Image } from "react-bootstrap";
 import Search from "../../Components/Search/Search";
 import JobList from "../../Components/JobList/JobList";
 import { getJobResults } from "../../Api/jobs";
-import 'bootstrap/dist/css/bootstrap.min.css';
-
+import Background from "../../Assets/background.jpg";
+import "../Home/Home.css";
 
 function Home() {
   const [searchPosition, setSearchPosition] = useState("");
@@ -39,7 +39,7 @@ function Home() {
     return (
       <Row>
         <Col md={12}>
-          <div>
+          <div className="search-fields-container">
             <Search
               handleSearch={handleSearch}
               updateSearch={updateSearch}
@@ -60,7 +60,8 @@ function Home() {
     );
   };
 
-  return <Container>{isLoading ? <Spinner animation="border" variant="primary"><span className="sr-only">Loading...</span></Spinner> : body()}</Container>;
+  return <div><Image src={Background} className="hero-image" />
+  {isLoading ? <Spinner animation="border" variant="primary"><span className="sr-only">Loading...</span></Spinner> : body()}</div>;
 }
 
 export default Home;

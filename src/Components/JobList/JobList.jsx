@@ -2,6 +2,8 @@ import React from 'react';
 import Job from '../Job/Job';
 import {Row, Col} from "react-bootstrap";
 import uniqid from "uniqid";
+import "../JobList/JobList.css";
+
 
 function JobList(props) {
 

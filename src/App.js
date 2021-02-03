@@ -6,6 +6,7 @@ import NavBar from "./Components/NavBar/NavBar";
 import Home from "./Pages/Home/Home";
 import JobDetails from "./Pages/JobDetails/JobDetails";
 
+
 function App() {
 
   return (
