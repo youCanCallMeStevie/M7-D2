@@ -18,7 +18,7 @@ function App() {
           render={props => <Home {...props} />}
         />
         <Route
-          path="/details/:id"
+          path="/details/:jobId"
           exact
           render={props => <JobDetails {...props} />}
         />

@@ -22,7 +22,7 @@ function Home() {
     defaultJobSearch();
   }, []);
 
-  const handleSearch = async () => {
+  const handleSearch = async (e) => {
     setIsLoading(true);
     const jobs = await getJobResults(searchPosition, searchLocation);
     setJobList(jobs);
@@ -60,7 +60,7 @@ function Home() {
     );
   };
 
-  return <Container>{isLoading ? <Spinner /> : body()}</Container>;
+  return <Container>{isLoading ? <Spinner animation="border" variant="primary"><span className="sr-only">Loading...</span></Spinner> : body()}</Container>;
 }
 
 export default Home;

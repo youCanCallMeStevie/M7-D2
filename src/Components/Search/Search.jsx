@@ -16,7 +16,7 @@ export default function Search(props) {
             </InputGroup.Text>
           </InputGroup.Prepend>
           <FormControl
-            placeholder="location"
+            placeholder="Location (ex: Berlin)"
             aria-label="location"
             aria-describedby="location"
             value={location}
@@ -30,7 +30,7 @@ export default function Search(props) {
             </InputGroup.Text>
           </InputGroup.Prepend>
           <FormControl
-            placeholder="position"
+            placeholder="Job Position (ex: Full Stack)"
             aria-label="position"
             aria-describedby="position"
             value={position}

@@ -11,7 +11,8 @@ function JobList(props) {
 			<Row>
             {jobList?.map((job) => (
 					<Col key={uniqid} sm={12} md={6} lg={3}>
-						<Job job={jobList} />
+						<Job job={job} /> 
+						{/* pass one single job, not the whole list. this is a new prop */}
 					</Col>
 				))}
 			</Row>
