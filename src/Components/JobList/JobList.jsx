@@ -4,13 +4,14 @@ import {Row, Col} from "react-bootstrap";
 import uniqid from "uniqid";
 
 function JobList(props) {
-	const { jobs } = props;
+
+	const { jobList } = props;
 	return (
 		<div>
 			<Row>
-            {jobs?.map((job) => (
+            {jobList?.map((job) => (
 					<Col key={uniqid} sm={12} md={6} lg={3}>
-						<Job job={job} />
+						<Job job={jobList} />
 					</Col>
 				))}
 			</Row>
